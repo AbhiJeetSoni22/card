@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -21,17 +21,17 @@ function App() {
         <div className="text-xl font-semibold text-white">Loading...</div>
       ) : (
         user && (
-          <div className="bg-white shadow-xl rounded-xl p-6 flex items-center space-x-6 border border-gray-300 w-[600px] transform transition-all duration-300 hover:scale-105">
+          <div className="bg-white shadow-xl rounded-xl p-6 flex flex-col sm:flex-row items-center space-y-6 sm:space-y-0 sm:space-x-6 border border-gray-300 w-full sm:w-[80%] lg:w-[600px] transform transition-all duration-300 hover:scale-105">
             {/* Image Section */}
             <img
               src={user.picture.large}
               alt="User"
-              className="w-50 h-50 rounded-lg border-4 border-gray-600 shadow-lg transform transition-all duration-500 hover:scale-102"
+              className="w-50 h-50 rounded-lg border-4 border-gray-600 shadow-lg sm:hover:scale-105 transition-transform"
             />
 
             {/* User Details Section */}
-            <div className="flex flex-col space-y-3 text-gray-800">
-              <div className="flex space-x-2">
+            <div className="flex flex-col space-y-3 text-gray-800 text-center sm:text-left">
+              <div className="flex justify-center sm:justify-start space-x-2">
                 <p className="text-2xl font-semibold text-gray-900">{user.name.first}</p>
                 <p className="text-2xl font-semibold text-gray-900">{user.name.last}</p>
               </div>
